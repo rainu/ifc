@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.rainu.lib</groupId>
   <artifactId>ifc</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   <name>In-File-Collections</name>
   
   <!-- 
