@@ -1,6 +1,5 @@
 package de.rainu.lib.ifc;
 
-import java.io.Serializable;
 import java.util.List;
 
 import de.rainu.lib.dbc.DBList;
@@ -13,7 +12,7 @@ import de.rainu.lib.dbc.beans.ConnectionInfo;
  *
  * @param <E>
  */
-public class IFList<E extends Serializable> extends DBList<E> {
+public class IFList<E> extends DBList<E> {
 	public IFList(String filePath, String tableName, boolean dropIfExist,
 			boolean debugMode) {
 		super(new ConnectionInfo(

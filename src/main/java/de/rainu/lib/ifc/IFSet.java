@@ -1,6 +1,5 @@
 package de.rainu.lib.ifc;
 
-import java.io.Serializable;
 import java.util.Set;
 
 import de.rainu.lib.dbc.DBSet;
@@ -13,7 +12,7 @@ import de.rainu.lib.dbc.beans.ConnectionInfo;
  *
  * @param <E>
  */
-public class IFSet<E extends Serializable> extends DBSet<E> {
+public class IFSet<E> extends DBSet<E> {
 	public IFSet(String filePath, String tableName, boolean dropIfExist,
 			boolean debugMode) {
 		super(new ConnectionInfo(

@@ -1,6 +1,5 @@
 package de.rainu.lib.ifc;
 
-import java.io.Serializable;
 import java.util.Map;
 
 import de.rainu.lib.dbc.DBMap;
@@ -14,7 +13,7 @@ import de.rainu.lib.dbc.beans.ConnectionInfo;
  * @param <K> Typ des Schlüssels
  * @param <V> Typ des Wertes
  */
-public class IFMap<K extends Serializable, V extends Serializable> extends DBMap<K, V> {
+public class IFMap<K, V> extends DBMap<K, V> {
 	public IFMap(String filePath, String tableName, boolean dropIfExist,
 			boolean debugMode) {
 		super(new ConnectionInfo(
