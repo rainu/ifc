@@ -1,4 +1,4 @@
-package de.rainu.lib.ifc;
+package de.raysha.lib.ifc;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -13,6 +13,8 @@ import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import de.raysha.lib.ifc.IFMap;
 
 public class IFMapBlackboxTest {
 	private final static boolean DELETE_ON_EXIT = true;

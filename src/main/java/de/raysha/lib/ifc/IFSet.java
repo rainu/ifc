@@ -1,20 +1,19 @@
-package de.rainu.lib.ifc;
+package de.raysha.lib.ifc;
 
-import java.util.Map;
+import java.util.Set;
 
-import de.rainu.lib.dbc.DBMap;
-import de.rainu.lib.dbc.beans.ConnectionInfo;
+import de.raysha.lib.dbc.DBSet;
+import de.raysha.lib.dbc.beans.ConnectionInfo;
 
 /**
- * Die IF(InFile)-Map ist eine {@link Map} Implementierung.
+ * Das IF(InFIle)-Set ist eine {@link Set} Implementierung.
  * 
  * @author rainu
  *
- * @param <K> Typ des Schlüssels
- * @param <V> Typ des Wertes
+ * @param <E>
  */
-public class IFMap<K, V> extends DBMap<K, V> {
-	public IFMap(String filePath, String tableName, boolean dropIfExist,
+public class IFSet<E> extends DBSet<E> {
+	public IFSet(String filePath, String tableName, boolean dropIfExist,
 			boolean debugMode) {
 		super(new ConnectionInfo(
 				"org.h2.Driver", 
@@ -22,30 +21,26 @@ public class IFMap<K, V> extends DBMap<K, V> {
 				"sa", 
 				""), 
 			tableName, dropIfExist, debugMode);
-		
-		//da wir in der h2 Datenbank Exklusiv-Zugriff haben, können wir getrost
-		//die Größe zwischenspeichern.
-		this.cacheSize(true);
 	}
 
-	public IFMap(String filePath, String tableName, boolean dropIfExist) {
+	public IFSet(String filePath, String tableName, boolean dropIfExist) {
 		this(filePath, tableName, dropIfExist, false);
 	}
 
-	public IFMap(String filePath, String tableName) {
+	public IFSet(String filePath, String tableName) {
 		// Ich geh davon aus, wenn man diese beiden Werte schon definiert, dass
 		// man auch möchte,
 		// dass die Tabelle nicht gelöscht wird
 		this(filePath, tableName, false);
 	}
 
-	public IFMap(String filePath) {
+	public IFSet(String filePath) {
 		// Standarmäßig soll die Tabelle geleert werden, fals sie schon
 		// existiert
 		this(filePath, null, true, false);
 	}
 
-	public IFMap() {
+	public IFSet() {
 		// Unter default Temp-Verzeichnis hinterlegen
 		this(System.getProperty("java.io.tmpdir") + "/IFC", null, true, false);
 	}

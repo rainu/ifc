@@ -1,4 +1,4 @@
-package de.rainu.lib.dbc.meta;
+package de.raysha.lib.dbc.meta;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -13,6 +13,9 @@ import java.sql.SQLException;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import de.raysha.lib.dbc.meta.MetadataManager;
+import de.raysha.lib.dbc.meta.TableMetadata;
 
 public class MetadataManagerBlackboxTest {
 

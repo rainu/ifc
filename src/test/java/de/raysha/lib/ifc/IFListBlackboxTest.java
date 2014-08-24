@@ -1,4 +1,4 @@
-package de.rainu.lib.ifc;
+package de.raysha.lib.ifc;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -16,7 +16,8 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.rainu.lib.dbc.DBList;
+import de.raysha.lib.dbc.DBList;
+import de.raysha.lib.ifc.IFMap;
 
 public class IFListBlackboxTest {
 	private final static String DB_PATH = "/tmp/IFC";

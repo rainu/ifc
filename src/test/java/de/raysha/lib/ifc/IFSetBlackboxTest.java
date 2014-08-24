@@ -1,4 +1,4 @@
-package de.rainu.lib.ifc;
+package de.raysha.lib.ifc;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
@@ -15,8 +15,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.rainu.lib.dbc.DBMapKeyIterator;
-import de.rainu.lib.dbc.DBSet;
+import de.raysha.lib.dbc.DBMapKeyIterator;
+import de.raysha.lib.dbc.DBSet;
+import de.raysha.lib.ifc.IFMap;
 
 public class IFSetBlackboxTest {
 	private final static String DB_PATH = "/tmp/IFC";

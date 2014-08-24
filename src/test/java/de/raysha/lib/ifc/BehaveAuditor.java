@@ -1,4 +1,4 @@
-package de.rainu.lib.ifc;
+package de.raysha.lib.ifc;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

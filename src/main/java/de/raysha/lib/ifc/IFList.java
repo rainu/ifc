@@ -1,47 +1,48 @@
-package de.rainu.lib.ifc;
+package de.raysha.lib.ifc;
 
-import java.util.Set;
+import java.util.List;
 
-import de.rainu.lib.dbc.DBSet;
-import de.rainu.lib.dbc.beans.ConnectionInfo;
+import de.raysha.lib.dbc.DBList;
+import de.raysha.lib.dbc.beans.ConnectionInfo;
 
 /**
- * Das IF(InFIle)-Set ist eine {@link Set} Implementierung.
- * 
+ * Das IF(InFIle)-List ist eine {@link List} Implementierung.
+ *
  * @author rainu
  *
  * @param <E>
  */
-public class IFSet<E> extends DBSet<E> {
-	public IFSet(String filePath, String tableName, boolean dropIfExist,
+public class IFList<E> extends DBList<E> {
+	public IFList(String filePath, String tableName, boolean dropIfExist,
 			boolean debugMode) {
 		super(new ConnectionInfo(
-				"org.h2.Driver", 
-				"jdbc:h2:" + filePath, 
-				"sa", 
-				""), 
+				"org.h2.Driver",
+				"jdbc:h2:" + filePath,
+				"sa",
+				""),
 			tableName, dropIfExist, debugMode);
 	}
 
-	public IFSet(String filePath, String tableName, boolean dropIfExist) {
+	public IFList(String filePath, String tableName, boolean dropIfExist) {
 		this(filePath, tableName, dropIfExist, false);
 	}
 
-	public IFSet(String filePath, String tableName) {
+	public IFList(String filePath, String tableName) {
 		// Ich geh davon aus, wenn man diese beiden Werte schon definiert, dass
 		// man auch möchte,
 		// dass die Tabelle nicht gelöscht wird
 		this(filePath, tableName, false);
 	}
 
-	public IFSet(String filePath) {
+	public IFList(String filePath) {
 		// Standarmäßig soll die Tabelle geleert werden, fals sie schon
 		// existiert
 		this(filePath, null, true, false);
 	}
 
-	public IFSet() {
+	public IFList() {
 		// Unter default Temp-Verzeichnis hinterlegen
 		this(System.getProperty("java.io.tmpdir") + "/IFC", null, true, false);
 	}
+
 }
